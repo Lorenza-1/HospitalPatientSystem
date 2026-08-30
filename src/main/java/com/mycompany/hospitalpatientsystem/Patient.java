@@ -47,7 +47,7 @@ public class Patient {
     
     public void displayDetails(){
         System.out.println("Patient ID: " +patientId);
-        System.out.println("Name: " +firstName+""+lastName);
+        System.out.println("Name: " +firstName+" "+lastName);
         System.out.println("Age: " +age);
         System.out.println("Gender: " +gender);
         System.out.println("Medical Condition: " +medicalCondition);
