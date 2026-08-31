@@ -39,7 +39,7 @@ public class HospitalSystem {
         if(findPatient(patient.getPatientId())!=null){
             return false; // Duplicate ID
         }
-        patient.add(patient);
+        patients.add(patient);
         return true;
     }
     
@@ -84,7 +84,7 @@ public class HospitalSystem {
         return new ArrayList<>(patients);
     }
     
-    public int getTotalpatients(){
+    public int getTotalPatients(){
         return patients.size();
     }
     
@@ -93,7 +93,7 @@ public class HospitalSystem {
     public String allocateBed(String patientId){
         Patient p = findPatient(patientId);
         if(p == null){
-            return"Error: Patient not found.";
+            return "Error: Patient not found.";
         }
         if(!(p instanceof Inpatient)){
             return "Error: Only inpatients can be allocated a bed.";
@@ -111,7 +111,7 @@ public class HospitalSystem {
                     wardBeds[i][j].occupy(patientId);
                     inpatient.setWardNumber(WARD_NUMBER);
                     inpatient.setBedNumber(bedId);
-                    return "Bed " + bedId + "allocated successfully";
+                    return "Bed " + bedId + " allocated successfully.";
                 }
             }
         }
@@ -145,8 +145,8 @@ public class HospitalSystem {
         for(int i = 0; i < ROWS; i++){
             for(int j = 0;j < COLS;j++){
                 Bed bed = wardBeds[i][j];
-                String status = bed.isOccupied()?"[X]":"[]";
-                System.out.printf("%s %s ", bed.getBedId(), status);
+                String status = bed.isOccupied()?"[X]":"[ ]";
+                System.out.printf("%s %s  ", bed.getBedId(), status);
             }
             System.out.println();
         }
@@ -166,7 +166,7 @@ public class HospitalSystem {
         return available;
     }
     
-    public ArrayList<Bed> getOccupiedbeds(){
+    public ArrayList<Bed> getOccupiedBeds(){
         ArrayList<Bed> occupied = new ArrayList<>();
         for (int i = 0; i < ROWS; i++){
             for (int j = 0; j < COLS;j++){
