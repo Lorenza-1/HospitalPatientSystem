@@ -23,7 +23,7 @@ public class Bed {
     public boolean isOccupied() { return occupied; }
     public String getPatientId() { return patientId; }
     
-    public void occupy (String patientId) {
+    public void occupy(String patientId) {
         this.occupied = true;
         this.patientId = patientId;
     }
