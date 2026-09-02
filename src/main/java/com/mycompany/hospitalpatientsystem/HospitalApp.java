@@ -40,7 +40,7 @@ public class HospitalApp {
                 case 10: displayOccupiedBeds(); break;
                 case 11: generateReports(); break;
                 case 12: sortPatients(); break;
-                case 0: System.out.println("Existing system. Goodbye!"); break;
+                case 0: System.out.println("Exiting system. Goodbye!"); break;
                 default: System.out.println("Invalid choice. Please try again!");
             }
         } while (choice !=0);
@@ -50,7 +50,7 @@ public class HospitalApp {
         
         System.out.println("\n╔════════════════════════════════════════╗");
         System.out.println("║     MEDI-CARE HOSPITAL SYSTEM    ║");
-        System.out.println("╠═══════════════════════════════════════════╣");
+        System.out.println("╠════════════════════════════════════════╣");
         System.out.println("║  PATIENT MANAGEMENT              ║");
         System.out.println("║    1. Register Patient           ║");
         System.out.println("║    2. Search Patient             ║");
@@ -68,7 +68,7 @@ public class HospitalApp {
         System.out.println("║   12. Sort Patients              ║");
         System.out.println("║  SYSTEM                          ║");
         System.out.println("║    0. Exit                       ║");
-        System.out.println("╚══════════════════════════════════════════╝");
+        System.out.println("╚════════════════════════════════════════╝");
     }
    
     
@@ -83,7 +83,7 @@ public class HospitalApp {
             return;
         }
         
-        System.out.print("First Namr: ");
+        System.out.print("First Name: ");
         String firstName = scanner.nextLine().trim();
         
         System.out.print("Last Name: ");
@@ -96,11 +96,14 @@ public class HospitalApp {
         System.out.print("Gender: ");
         String gender = scanner.nextLine().trim();
         
-        System.out.print("Patient Category");
-        System.out.print("1. Inpatient");
-        System.out.print("2. Outpatient");
-        System.out.print("3. Emergency");
-        System.out.print("Select category");
+        System.out.print("Medical Condition: ");
+        String condition = scanner.nextLine().trim();
+        
+        System.out.println("Patient Category");
+        System.out.println("1. Inpatient");
+        System.out.println("2. Outpatient");
+        System.out.println("3. Emergency");
+        System.out.print("Select category: ");
         int catChoice = scanner.nextInt();
         scanner.nextLine();
         
@@ -153,25 +156,25 @@ public class HospitalApp {
             System.out.println("Patient not found.");
             return;
         }
-        System.out.println("Enter new details (press Enter to kepp current value):");
+        System.out.println("Enter new details (press Enter to keep current value):");
         
-        System.out.println("First Name [" + p.getFirstName() + "]: ");
+        System.out.print("First Name [" + p.getFirstName() + "]: ");
         String firstName = scanner.nextLine().trim();
         if (firstName.isEmpty()) firstName = p.getFirstName();
         
-        System.out.println("Last Name [" + p.getLastName() + "]: ");
+        System.out.print("Last Name [" + p.getLastName() + "]: ");
         String lastName = scanner.nextLine().trim();
         if (lastName.isEmpty()) lastName = p.getLastName();
         
-        System.out.println("Age [" + p.getAge() + "]: ");
+        System.out.print("Age [" + p.getAge() + "]: ");
         String ageInput = scanner.nextLine().trim();
         int age = ageInput.isEmpty() ? p.getAge() : Integer.parseInt(ageInput);
         
-        System.out.println("Gender [" + p.getGender() + "]: ");
+        System.out.print("Gender [" + p.getGender() + "]: ");
         String gender = scanner.nextLine().trim();
         if(gender.isEmpty())gender = p.getGender();
         
-        System.out.println("Medical Condition [" + p.getMedicalCondition() + "]: ");
+        System.out.print("Medical Condition [" + p.getMedicalCondition() + "]: ");
         String condition = scanner.nextLine().trim();
         if (condition.isEmpty()) condition = p.getMedicalCondition();
         
@@ -196,7 +199,7 @@ public class HospitalApp {
     }
     
     private static void deletePatient() {
-        System.out.print("\nEnter Patient ID to delete");
+        System.out.print("\nEnter Patient ID to delete: ");
         
         String id = scanner.nextLine().trim();
         
@@ -237,7 +240,7 @@ public class HospitalApp {
         String bedId = scanner.nextLine().trim();
         
         if (system.releaseBed(bedId)) {
-            System.out.println("Bed" + bedId + "released successfully.");
+            System.out.println("Bed" + bedId + " released successfully.");
         } else {
             System.out.println("Error: Bed not found or already vacant.");
         }
