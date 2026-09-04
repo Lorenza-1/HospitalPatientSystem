@@ -72,7 +72,7 @@ public class HospitalSystem {
         if(p instanceof Inpatient){
             Inpatient inpatient = (Inpatient)p;
             String bedId = inpatient.getBedNumber();
-            if(bedId!=null&&!bedId.isEmpty()){
+            if(bedId!=null&&!bedId.isEmpty()&&!bedId.equalsIgnoreCase("Not Assigned")){
                 releaseBed(bedId);
             }
         }
@@ -100,7 +100,7 @@ public class HospitalSystem {
         }
         
         Inpatient inpatient = (Inpatient)p;
-        if(inpatient.getBedNumber()!=null && !inpatient.getBedNumber().isEmpty()){
+        if(inpatient.getBedNumber()!=null && !inpatient.getBedNumber().isEmpty()&& !inpatient.getBedNumber().equalsIgnoreCase("Not Assigned")){
             return "Error: Patient already has a bed allocated.";
         }
         

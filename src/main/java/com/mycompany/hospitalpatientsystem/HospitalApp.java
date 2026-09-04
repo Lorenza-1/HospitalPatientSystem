@@ -48,27 +48,28 @@ public class HospitalApp {
     
     private static void displayMenu(){
         
-        System.out.println("\n╔════════════════════════════════════════╗");
-        System.out.println("║     MEDI-CARE HOSPITAL SYSTEM    ║");
-        System.out.println("╠════════════════════════════════════════╣");
-        System.out.println("║  PATIENT MANAGEMENT              ║");
-        System.out.println("║    1. Register Patient           ║");
-        System.out.println("║    2. Search Patient             ║");
-        System.out.println("║    3. Update Patient             ║");
-        System.out.println("║    4. Delete Patient             ║");
-        System.out.println("║    5. Display All Patients       ║");
-        System.out.println("║  BED MANAGEMENT                  ║");
-        System.out.println("║    6. Allocate Bed               ║");
-        System.out.println("║    7. Release Bed                ║");
-        System.out.println("║    8. Display Ward Layout        ║");
-        System.out.println("║    9. Display Available Beds     ║");
-        System.out.println("║   10. Display Occupied Beds      ║");
-        System.out.println("║  REPORTS                         ║");
-        System.out.println("║   11. Generate Reports           ║");
-        System.out.println("║   12. Sort Patients              ║");
-        System.out.println("║  SYSTEM                          ║");
-        System.out.println("║    0. Exit                       ║");
-        System.out.println("╚════════════════════════════════════════╝");
+        System.out.println("     MEDI-CARE HOSPITAL SYSTEM    ");
+        System.out.println("                                  ");
+        System.out.println("  PATIENT MANAGEMENT              ");
+        System.out.println("    1. Register Patient           ");
+        System.out.println("    2. Search Patient             ");
+        System.out.println("    3. Update Patient             ");
+        System.out.println("    4. Delete Patient             ");
+        System.out.println("    5. Display All Patients       ");
+        System.out.println("                                  ");
+        System.out.println("  BED MANAGEMENT                  ");
+        System.out.println("    6. Allocate Bed               ");
+        System.out.println("    7. Release Bed                ");
+        System.out.println("    8. Display Ward Layout        ");
+        System.out.println("    9. Display Available Beds     ");
+        System.out.println("   10. Display Occupied Beds      ");
+        System.out.println("                                  ");
+        System.out.println("  REPORTS                         ");
+        System.out.println("   11. Generate Reports           ");
+        System.out.println("   12. Sort Patients              ");
+        System.out.println("                                  ");
+        System.out.println("  SYSTEM                          ");
+        System.out.println("    0. Exit                       ");
     }
    
     
